@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { useState } from "react";
 import { ModalImageSee } from "./ModalImage";
+import Link from "next/link";
 
 export default function Home() {
   const [ModalImage, setModalImage] = useState({
@@ -13,7 +14,7 @@ export default function Home() {
   const Empresas = [
     {
       id: 1,
-      image: "/GrupoMarkiki.jpeg",
+      image: "/LogoMarkiki.png",
       Nombre: "Grupo Markiki",
     },
     {
@@ -67,16 +68,19 @@ export default function Home() {
         <h2 className="text-4xl lg:text-6xl font-semibold">
           Comprometidos con tu desarrollo.
         </h2>
-        <p className="text-justify">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae
-          dolor numquam, maxime tempora reiciendis, ratione officia delectus
-          placeat optio repellat voluptatibus reprehenderit perferendis beatae
-          accusamus voluptatum quaerat nihil? Itaque, qui!
+        <p className="text-justify pb-5">
+          Markiki es un conglomerado empresarial diversificado, líder en ofrecer
+          soluciones innovadoras en tres áreas clave: construcción,
+          entretenimiento y tecnología. Con una visión integral y orientada al
+          futuro, cada una de las empresas dentro del grupo desempeña un papel
+          crucial en satisfacer las necesidades cambiantes del mercado.
         </p>
 
-        <Button className="bg-[#432e70] hover:bg-white hover:text-black hover:scale-105">
-          Conocenos
-        </Button>
+        <Link href={"/Contacto"} title="Contacto">
+          <Button className="bg-[#432e70] hover:bg-white hover:text-black hover:scale-105">
+            Contácto
+          </Button>
+        </Link>
       </div>
     </div>
   );

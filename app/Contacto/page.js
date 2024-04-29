@@ -1,14 +1,23 @@
+"use client";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Facebook, Instagram, PhoneCallIcon } from "lucide-react";
-import React from "react";
+import React, { useState } from "react";
 
 const Contacto = () => {
+  const [InputValues, setInputValues] = useState({});
+
+  const HandlerChange = (e) => {
+    setInputValues({
+      [e.target.name]: e.targer.value,
+    });
+  };
+
   return (
     <div className="container px-10">
       <div className="grid sm:grid-cols-2 items-center gap-10 p-8 mx-auto max-w-4xl bg-white shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-md text-[#333] font-[sans-serif]">
         <div>
           <h1 className="text-3xl font-extrabold">Contácto</h1>
-          <p className="text-sm text-gray-600 mt-3">
+          <p className="  text-gray-600 mt-3">
             A continuación, encontrarás nuestra información de contacto y un
             formulario para que nos envíes un mensaje.
           </p>
@@ -216,7 +225,12 @@ const Contacto = () => {
             </TabsContent>
           </Tabs>
         </div>
-        <form className="ml-auo space-y-4">
+        {/* <form
+          onSubmit={(e) => {
+            e.preventDefault();
+          }}
+          className="ml-auo space-y-4"
+        >
           <input
             type="text"
             placeholder="Name"
@@ -244,7 +258,7 @@ const Contacto = () => {
           >
             Send
           </button>
-        </form>
+        </form> */}
       </div>
     </div>
   );
