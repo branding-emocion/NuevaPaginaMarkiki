@@ -48,7 +48,7 @@ const MenuPrincipal = () => {
             >
               <Image
                 title="Ir a inicio"
-                src="/GrupoMarkiki.jpeg"
+                src="/LogoMarkiki.png"
                 width={150}
                 height={40}
                 alt="Logotype"
